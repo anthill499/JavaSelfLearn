@@ -9,13 +9,31 @@ import java.util.Scanner;
  */
 public class FirstProgram {
     public static void main(String[] args) {
-    int wage;
-
+      int wage;
       Scanner scnr = new Scanner(System.in);
-      System.out.print("Please enter an integer");
-      wage = scnr.nextInt();
+      // System.out.print("Please enter an integer");
+      // wage = scnr.nextInt();
       
-      System.out.print("Salary is ");
-      System.out.println(wage * 40 * 52);
+      // System.out.print("Salary is ");
+      // System.out.println(wage * 40 * 52);
+
+      // if (wage <= 15) {
+      //   System.out.println("You make too little!");
+      // } else {
+      //   System.out.println("You make too much!");
+      // }
+
+      stringEquality("Hi", "Hi");
+    }
+
+    public static void stringEquality(String s, String d) {
+      String boolStr;
+      System.out.println("Are these strings equal?");
+      if (s.equals(d)) {
+        boolStr = "Yes";
+      } else {
+        boolStr = "No";
+      }
+      System.out.println(boolStr);
     }
 }
