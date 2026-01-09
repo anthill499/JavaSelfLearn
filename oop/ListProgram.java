@@ -1,5 +1,13 @@
 import java.util.ArrayList;
 import java.util.Random;
+
+// An ArrayList stores a list of items in contiguous memory locations, 
+// which enables immediate access to any element at index i of 
+// ArrayList v by using the get() and set() methods 
+
+// ➡️ inserting an item at locations other than the end of the ArrayList requires making room by shifting higher-indexed items 
+// vs ⬅️ the other way around
+// Each shift of an item from one element to another element requires a few processor instructions
 public class ListProgram {
     public static void main(String[] args) {
         ArrayListImpl arrayListImpl = new ArrayListImpl();
@@ -9,11 +17,11 @@ public class ListProgram {
     }
 }
 
-/*  Many of Java's built-in classes, such as Java's Collection library, only work with objects
+/**  Many of Java's built-in classes, such as Java's Collection library, only work with objects
 Wrapper class objects are immutable (can not change the object via methods or variable assignments after assignment)
 Autoboxing - implicit conversion of primitives to their corresponding wrapper classes
 Unboxing - automatic conversion of wrapper to int calsses
-@param
+@author Anthony
 */ 
 class ArrayListImpl {
     private ArrayList<Integer> arr;

@@ -1,0 +1,56 @@
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class ArrayShifting {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      ArrayList<Integer> myInts = new ArrayList<Integer>(); // Dummy array list to demo ops
+      int numElem;                                          // User defined array size
+      int numOps;                                           // User defined number of inserts
+      int i;                                                // Loop index
+
+      
+      System.out.print("\nEnter initial ArrayList size: ");
+      numElem = scnr.nextInt();
+
+      System.out.print("Enter number of ArrayList adds: ");
+      numOps = scnr.nextInt();
+    
+      scnr.close();
+      System.out.print(System.nanoTime() + "  Adding elements to ArrayList...");
+
+      myInts.clear();
+      for (i = 0; i < numElem; ++i) {
+         myInts.add(0);
+      }
+
+      System.out.println("done.");
+      System.out.print(System.nanoTime() + "  Writing to each element...");
+
+      for (i = 0; i < numElem; ++i) {
+         myInts.set(i, 777); // Any value
+      }
+
+      System.out.println("done.");
+      System.out.print(System.nanoTime() + "  Doing " + numOps + " additions at the end...");
+
+      for (i = 0; i < numOps; ++i) {
+         myInts.add(888); // Any value
+      }
+
+      System.out.println("done.");
+      System.out.print(System.nanoTime() + "  Doing " + numOps + " additions at index 0...");
+
+      for (i = 0; i < numOps; ++i) {
+         myInts.add(0, 444);
+      }
+      System.out.println("done.");
+      System.out.print(System.nanoTime() + "  Doing " + numOps + " removes...");
+
+      for (i = 0; i < numOps; ++i) {
+         myInts.remove(0);
+      }
+
+      System.out.println(System.nanoTime() + "done.");
+   }
+}
